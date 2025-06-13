@@ -1,0 +1,237 @@
+@import url("./root.css");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap');
+@keyframes fadeDown{
+    0%{
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-30px);
+    } 
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(30px);
+    } 
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes wiggle{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-4px);
+    }
+    50%{
+        transform: translateY(4px);
+    }
+    75%{
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes side {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-5px);
+    }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  transition: background-color 300ms ease-in;
+}
+
+.fade-down{
+    animation: fadeDown 1s ease-in;
+}
+
+.fade-up{
+    animation: fadeUp 800ms ease-in;
+}
+
+
+#analyzing-text{
+    animation: wiggle 1s infinite ease;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+html, body {
+    background-color: var(--primary-color) ;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-family: var(--font), sans-serif;
+    color: var(--text-color);
+}
+
+header{
+    font-family: var(--font), sans-serif;
+    display: flex;
+    min-width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+}
+
+#toggle-theme-btn{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;    
+    border-color: var(--border-color);
+}
+
+#toggle-theme-btn:hover{
+    cursor: pointer;
+}
+
+#problem-list{
+    list-style: none;
+}
+
+#problem-item{
+    font-family: var(--font), sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+#problem-item span{
+    color: var(--text-color);
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+#problem-item:visited{
+    color: inherit;
+}
+
+#problem-content{
+    display: flex;
+    background-color: var(--tertiary-color);
+    align-items: center;
+    border: 1px solid;
+    border-color: var(--border-color);
+    height: 8vh;
+    padding: 0 10px 0 10px;
+    border-radius: 20px;
+    width: 40vw;
+    transition: transform 300ms ease-in-out;
+}
+
+#problem-content:hover{
+    transform: translateX(-5px);
+}
+
+#problem-content span {
+  flex: 1;
+}
+
+
+#add-problem-btn{
+    margin:5px 0px 0px 5px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-style: hidden;
+    border-radius: 30px;
+    border-color: var(--border-color);
+    animation: 500ms ease-in-out;
+}
+
+#add-problem-btn:hover{
+    scale: 1.2;
+}
+
+#delete-btn{
+    width: 25px;
+    height: 25px;
+    animation: 500ms ease-in-out;
+}
+
+#delete-btn:hover{
+    scale: 1.2;
+}
+
+#add-problem-btn:hover{
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+#search-field{
+    width: 30%;
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+    font-family: var(--font), sans-serif;
+
+}
+
+#search-field::placeholder{
+    font-family: var(--font), sans-serif;
+    color: var(--text-secondary);
+}
+
+
+#code-input{
+    margin-top: auto;
+    width: 46%;
+    margin-left: 26%;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-top: 15px;
+    resize: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--border-color);
+}
+
+#code-input::placeholder{
+    font-family: monospace, sans-serif;
+    color: var(--text-secondary);
+}
+
+#logo{
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+#add-problem-card{
+    display: flex;
+    width: 80vw;
+}

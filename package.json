@@ -1,0 +1,50 @@
+{
+  "name": "leetnote",
+  "version": "1.0.0",
+  "description": "A= convenient way to store and generate details about LeetCode problems",
+  "author": "Abdelrahman Ahmed",
+  "main": "electron/dist/main.js",  
+  "scripts": {
+    "start": "electron .",
+    "build:electron": "tsc -p electron",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "tsc -p backend",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:electron",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "com.abdelrahman.leetnote",
+    "productName": "LeetNote",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets" 
+    },
+    "files": [
+      "electron/dist/**/*",
+      "frontend/dist/**/*",
+      "backend/dist/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "frontend/dist",
+        "to": "frontend"
+      },
+      {
+        "from": "backend/dist",
+        "to": "backend"
+      }
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./assets/LeetCode_logo.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.0.0",
+    "typescript": "^5.0.0"
+  }
+}

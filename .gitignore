@@ -1,0 +1,51 @@
+# Root dependencies
+node_modules/
+
+# Build outputs
+/dist
+/frontend/dist
+/backend/dist
+/electron/dist
+/release
+
+# OS + IDE junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Compiled source
+*.js
+*.js.map
+*.tsbuildinfo
+
+# Env + secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Prisma artifacts
+/backend/prisma/dev.db
+/backend/prisma/dev.sqlite
+/backend/prisma/migrations/
+backend/leetnote.db
+
+# Electron packaging output
+out/
+*.asar
+
+# VSCode
+.vscode/
+
+# Cache
+.nyc_output
+.cache
+coverage/
+*.sqlite
+
+# Lock files (optional per team policy)
+# package-lock.json
+# yarn.lock
+
+# Local database
+*.db
