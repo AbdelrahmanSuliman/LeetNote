@@ -5,12 +5,12 @@ A desktop application that helps you store, manage, and analyze your LeetCode pr
 
 ## Features
 
-- 📝 Store and manage your LeetCode problem solutions
-- 🔍 Analyze code complexity and optimization
-- 📊 Track time and space complexity of your solutions
-- 💾 Local database storage for your solutions
-- 🎯 Easy-to-use interface for managing problems
-- 🔄 Automatic code analysis and optimization suggestions
+-  Store and manage your LeetCode problem solutions
+-  Analyze code complexity and optimization
+-  Track time and space complexity of your solutions
+-  Local database storage for your solutions
+-  Easy-to-use interface for managing problems
+-  Automatic code analysis and optimization suggestions
 
 ## Tech Stack
 
